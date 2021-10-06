@@ -1,13 +1,12 @@
 import pytest
-from invoicegenerator import CabInvoice
+from invoicegenerator import Ride, User, InvoiceGenerator
+
+invoice_generator = InvoiceGenerator()
 
 
-def test_method():
-    expected_total_fare = 25
-    assert expected_total_fare == CabInvoice().calculate_fare(2, 5)
+def test_case():
+    assert (isinstance(invoice_generator, InvoiceGenerator))
 
-
-@pytest.mark.xfail
-def test_method1():
-    expected_total_fare = 35
-    assert expected_total_fare == CabInvoice().calculate_fare(2, 5)
+# def test_raises():
+#     with pytest.raises(TypeError):
+#         assert cab.calculate_fare('s', 's')
